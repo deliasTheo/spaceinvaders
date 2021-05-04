@@ -44,6 +44,6 @@
 			spaceinvaders.positionnerUnNouveauVaisseau(15,9);
 		}
 	   
-	   Etape REFACTOR : améliorer la qualité du code
+	   // Etape REFACTOR : améliorer la qualité du code
 
-       }
+}
