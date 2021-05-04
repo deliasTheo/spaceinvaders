@@ -1,8 +1,8 @@
 # spaceinvaders
 
-##Semaine n°2 : du 26 avril au 2 mai 
+## Semaine n°2 : du 26 avril au 2 mai 
 ### Sprints et fonctionnalités réalisées 
-####Fonctionnalité 1 (en cours)
+#### Fonctionnalité 1 (en cours)
 - Story n°1 : Créer un espace de jeu
 Un espace de jeu est créé aux dimensions données (2D) Cet espace de jeu est vide
 - Story n°2 : Positionner un nouveau vaisseau dans l’espace de jeu
