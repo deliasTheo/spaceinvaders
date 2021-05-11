@@ -48,6 +48,45 @@ import fr.unilim.iut.spaceinvaders.utils.HorsEspaceJeuException;
 			".......V.......\n" , spaceinvaders.recupererEspaceJeuDansChaineASCII());
 		}
 	   
+	   @Test
+		public void test_VaisseauAvance_DeplacerVaisseauVersLaDroite() {
+			
+			spaceinvaders.positionnerUnNouveauVaisseau(7,9);
+
+			spaceinvaders.deplacerVaisseauVersLaDroite();
+			
+			assertEquals("" + 
+			"...............\n" + 
+			"...............\n" +
+			"...............\n" + 
+			"...............\n" + 
+			"...............\n" + 
+			"...............\n" + 
+			"...............\n" + 
+			"...............\n" + 
+			"...............\n" + 
+			"........V......\n" , spaceinvaders.recupererEspaceJeuDansChaineASCII());
+		}
+
+	   @Test
+		public void test_VaisseauImmobile_DeplacerVaisseauVersLaDroite() {
+			
+			spaceinvaders.positionnerUnNouveauVaisseau(14,9);
+
+			spaceinvaders.deplacerVaisseauVersLaDroite();
+			
+			assertEquals("" + 
+			"...............\n" + 
+			"...............\n" +
+			"...............\n" + 
+			"...............\n" + 
+			"...............\n" + 
+			"...............\n" + 
+			"...............\n" + 
+			"...............\n" + 
+			"...............\n" + 
+			"..............V\n" , spaceinvaders.recupererEspaceJeuDansChaineASCII());
+		}
 	  
 	   
 	   @Test(expected = HorsEspaceJeuException.class)
