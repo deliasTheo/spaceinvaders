@@ -19,5 +19,42 @@ Un nouveau vaisseau est créé Le vaisseau est positionné aux coordonnées tran
 
 Cette semaine le projet n'a pas avancé
 
+## Semaine n°4 : du 10 au 16 mai
+### Sprints et fonctionnalités réalisées 
+#### Fonctionnalité 1 
+- Story n°3 : Déplacer le vaisseau vers la droite dans l'espace de jeu
+Le vaisseau peut maintenant se deplacer vers la droite. Lorsque celui-ci est sur le bord, il est immobile si est censé se deplacer sur la droite
+- Story n°4 : Déplacer le vaisseau vers la gauche dans l'espace de jeu
+- Le vaisseau peut maintenant se deplacer vers la gauche. Lorsque celui-ci est sur le bord, il est immobile si est censé se deplacer sur la gauche
+
+#### Fonctionnalité 2
+- Etape n°1 : Positionner un nouveau vaisseau avec une dimension donnée
+Le vaiseau peut maintanant être positionné ou on le veux. De plus nous avons mis en place beaucoup de refactoring afin que le code soit bien lisible
+- Etape n°2 : Faire en sorte qu'il soit impossible de positionner un nouveau vaisseau qui déborde de l'espace de jeu
+Ici on a géré deux potentielle "erreur" afin que le vaisseau soit toujours bien positionné. Nous avons vu en effet que nous avions que 2 cas a tester :
+  - un test pour une longueur trop grande qui provoque un débordement sur la droite (celui de l'exemple n°1)
+  - un test pour une hauteur trop grande qui provoque un débordement vers le haut (celui de l'exemple n°2)
+- Etape n°3 : Déplacer un vaisseau vers la droite en tenant compte de sa dimension
+Nous pouvons maintenant deplacer le vaisseau vers la droite en tenant compte des dimensions. Nous avons remarqué que les tests étais déjà au vert, nous avons donc juste fait un peu de refactoring
+- Etape n°4 : Déplacer un vaisseau vers la gauche en tenant compte de sa dimension
+Tout comme ^récédemment, nous pouvons faire de même vers la gauche, et les test étais au vert. 
+En therme de refactoring nous avons notemment crée deux nouvelle classe : dimention et posistion afin que notre code soit plus lisible dans le temps. Toutes les classes ont ainsi subi des modifications allant dans se sens
+
+#### Diagramme de classe
+
+![Diagrammes de classes de la semaine 3](images/Semaine3Diagramme.png)
+
+#### Nuage de mots
+![Nuage de mots de la semaine 2](images/Semaine2Nuage.png)
+
+
+
+
+
+
+
+
+
+
 
 
