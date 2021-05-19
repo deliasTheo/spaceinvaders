@@ -45,7 +45,7 @@ En therme de refactoring nous avons notemment crée deux nouvelle classe : dimen
 ![Diagrammes de classes de la semaine 3](images/Semaine3Diagramme.png)
 
 #### Nuage de mots
-![Nuage de mots de la semaine 2](images/Semaine2Nuage.png)
+![Nuage de mots de la semaine 2](images/Semaine3Nuage.png)
 
 
 
