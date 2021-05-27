@@ -55,7 +55,7 @@ En therme de refactoring nous avons notemment crée deux nouvelle classe : dimen
 
 #### Diagramme de classe du moteur
 
-![Diagrammes de classes de la semaine 4](images/Semaine4Diagramme.png)
+![Diagrammes de classes de la semaine 4](images/Semaine4Diagramme.PNG)
 
 #### Nuage de mots du moteur
 ![Nuage de mots de la semaine 4](images/Semaine4Nuage.png)
