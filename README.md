@@ -60,7 +60,10 @@ En therme de refactoring nous avons notemment crée deux nouvelle classe : dimen
 #### Nuage de mots du moteur
 ![Nuage de mots de la semaine 4](images/Semaine4Nuage.png)
 
-
+## Glossaire
+- Vaisseau : véhicule commandé par le joueur, pouvant se déplacer de droite à gauche et ayant la possibilité de lancer des missiles destinés à détruire le(s) envahisseurs. 
+- Missile : projectile envoyé à la verticale par le vaisseau vers l'envahisseur dans le but de le détruire.
+- Sprite : élément graphique qui peut se déplacer sur l'écran.
 
 
 
