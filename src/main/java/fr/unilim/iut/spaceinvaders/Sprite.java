@@ -59,5 +59,15 @@ public abstract class Sprite {
 		this.origine.changerAbscisse(x);
 		this.origine.changerOrdonnee(y);
 	}
+	
+	public int longueur() {
+        // TODO Auto-generated method stub
+        return this.dimension.longueur();
+    }
+
+    public int hauteur() {
+        // TODO Auto-generated method stub
+        return this.dimension.hauteur();
+    }
 
 }

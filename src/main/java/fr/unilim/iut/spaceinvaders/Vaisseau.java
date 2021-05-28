@@ -1,15 +1,18 @@
 package fr.unilim.iut.spaceinvaders;
 
+import fr.unilim.iut.spaceinvaders.utils.MissileException;
+
 public class Vaisseau extends Sprite {
 
 	public Vaisseau(Dimension dimension, Position positionOrigine, int vitesse) {
 		super(dimension, positionOrigine, vitesse);
 	}
 
-	public Missile tirerUnMissile(Dimension dimensionMissile, int vitesseMissile) {
-		
+	public Missile tirerUnMissile(Dimension dimensionMissile, int vitesseMissile) throws MissileException {
+		 if (dimensionMissile.longueur > this.dimension.longueur)
+	            throw new MissileException("La longueur du missile est supérieure à la longueur du vaisseau");
+		 
 		Position positionOrigineMissile = calculerLaPositionDeTirDuMissile(dimensionMissile);
-
 		return new Missile(dimensionMissile, positionOrigineMissile, vitesseMissile);
 	}
 
