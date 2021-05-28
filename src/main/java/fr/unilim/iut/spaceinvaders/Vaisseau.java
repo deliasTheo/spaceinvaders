@@ -1,65 +1,25 @@
 package fr.unilim.iut.spaceinvaders;
 
-public class Vaisseau {
+public class Vaisseau extends Sprite {
 
-	Dimension dimension;
-    Position origine;
-    private int vitesse;
-
-    public Vaisseau(int longueur, int hauteur) {
-	    this(longueur, hauteur, 0, 0);
-    }
-
-   public Vaisseau(int longueur, int hauteur, int x, int y) {
-	   this(new Dimension(longueur, hauteur), new Position(x, y),1);
-    }
-   
-   public Vaisseau(Dimension dimension, Position positionOrigine, int vitesse) {
-	    this.dimension = dimension;
-	    this.origine = positionOrigine;
-	    this.vitesse=vitesse;
-   }
-	
-    public boolean occupeLaPosition(int x, int y) {
-		return (estAbscisseCouverte(x) && estOrdonneeCouverte(y));
-    }
-
-	private boolean estOrdonneeCouverte(int y) {
-		return (ordonneeLaPlusBasse()<=y) && (y<=ordonneeLaPlusHaute());
+	public Vaisseau(Dimension dimension, Position positionOrigine, int vitesse) {
+		super(dimension, positionOrigine, vitesse);
 	}
 
-	public int ordonneeLaPlusBasse() {
-		return this.origine.ordonnee()-this.dimension.hauteur()+1;
-	}
-
-	public int ordonneeLaPlusHaute() {
-		return this.origine.ordonnee();
-	}
-
-	private boolean estAbscisseCouverte(int x) {
-		return (abscisseLaPlusAGauche()<=x) && (x<=abscisseLaPlusADroite());
-	}
-
-	public int abscisseLaPlusADroite() {
-		return this.origine.abscisse()+this.dimension.longueur()-1;
-	}
-
-	public void seDeplacerVersLaDroite() {
-		this.origine.changerAbscisse(this.origine.abscisse()+vitesse);
+	public Missile tirerUnMissile(Dimension dimensionMissile, int vitesseMissile) {
 		
-	}
-	public void seDeplacerVersLaGauche() {
-		 this.origine.changerAbscisse(this.origine.abscisse()-vitesse);
-		
-	}
-	
-	public int abscisseLaPlusAGauche() {
-        return this.origine.abscisse();
+		Position positionOrigineMissile = calculerLaPositionDeTirDuMissile(dimensionMissile);
+
+		return new Missile(dimensionMissile, positionOrigineMissile, vitesseMissile);
 	}
 
-	public void positionner(int x, int y) {
-		this.origine.changerAbscisse(x);
-		this.origine.changerOrdonnee(y);
-    }
+	private Position calculerLaPositionDeTirDuMissile(Dimension dimensionMissile) {
+		int abscisseMilieuVaisseau = this.abscisseLaPlusAGauche() + (this.dimension.longueur() / 2);
+		int abscisseOrigineMissile = abscisseMilieuVaisseau - (dimensionMissile.longueur() / 2);
+
+		int ordonneeeOrigineMissile = this.ordonneeLaPlusBasse() - 1;
+		Position positionOrigineMissile = new Position(abscisseOrigineMissile, ordonneeeOrigineMissile);
+		return positionOrigineMissile;
+	}
 
 }

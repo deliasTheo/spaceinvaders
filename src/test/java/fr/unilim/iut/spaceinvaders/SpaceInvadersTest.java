@@ -165,7 +165,7 @@
 	   }
 	   
 	   @Test
-		public void VaisseauImmobile_DeplacerVaisseauVersLaGauche() {
+		public void test_VaisseauImmobile_DeplacerVaisseauVersLaGauche() {
 			
 			spaceinvaders.positionnerUnNouveauVaisseau(new Dimension(3,2),new Position(0,9), 3);
 			spaceinvaders.deplacerVaisseauVersLaGauche();
@@ -239,6 +239,26 @@
 	     }
 
 
+	    @Test
+	     public void test_MissileBienTireDepuisVaisseau_VaisseauLongueurImpaireMissileLongueurImpaire() {
+
+		   spaceinvaders.positionnerUnNouveauVaisseau(new Dimension(7,2),new Position(5,9), 2);
+		   spaceinvaders.tirerUnMissile(new Dimension(3,2),2);
+
+	       assertEquals("" + 
+	       "...............\n" + 
+	       "...............\n" +
+	       "...............\n" + 
+	       "...............\n" + 
+	       "...............\n" + 
+	       "...............\n" + 
+	       ".......MMM.....\n" + 
+	       ".......MMM.....\n" + 
+	       ".....VVVVVVV...\n" + 
+	       ".....VVVVVVV...\n" , spaceinvaders.recupererEspaceJeuDansChaineASCII());
+	    }
+	    
+	    
 	   
 
 }
