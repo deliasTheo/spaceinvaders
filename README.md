@@ -64,6 +64,8 @@ En therme de refactoring nous avons notemment crée deux nouvelle classe : dimen
 - Vaisseau : véhicule commandé par le joueur, pouvant se déplacer de droite à gauche et ayant la possibilité de lancer des missiles destinés à détruire le(s) envahisseurs. 
 - Missile : projectile envoyé à la verticale par le vaisseau vers l'envahisseur dans le but de le détruire.
 - Sprite : élément graphique qui peut se déplacer sur l'écran.
+- Envahisseur : ennemi qui apparaît à l'écran, se déplace automatiquement et qui doit être détruit par un missile lancé depuis le vaisseau du joueur.
+
 
 
 
