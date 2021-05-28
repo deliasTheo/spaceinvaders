@@ -45,14 +45,20 @@ En therme de refactoring nous avons notemment crée deux nouvelle classe : dimen
 ![Diagrammes de classes de la semaine 3](images/Semaine3Diagramme.png)
 
 #### Nuage de mots
-![Nuage de mots de la semaine 2](images/Semaine2Nuage.png)
+![Nuage de mots de la semaine 3](images/Semaine3Nuage.png)
 
+## Semaine n°5 : du 17 au 23 mai
+### Sprints et fonctionnalités réalisées 
+#### Spike : Prise en main et intégration d'un moteur graphique
+- Dans un premier temps il a fallu comprendre le fonctionnement du moteur graphique utilisé. L'auteur de se script est Vincent Thomas, professeur a l'IUT Informatique de Reims.  J'ai donc commencé par tester le moteur graphique, lu la documentation et essayer de changer les touches "q" et "d" par les fleches.
+- Une fois le script compris, nous l'avons utilisé afin de l'intégrer à notre projet puis l'adapter afin qu'il respect les règles que nous avions déjà fixé. Notemment un vaisseau peut se déplacer seulement vers la droite et la gauche. Celui-ci ne peut pas non plus dépasser de la fenetre de jeu. 
 
+#### Diagramme de classe du moteur
 
+![Diagrammes de classes de la semaine 4](images/Semaine4Diagramme.PNG)
 
-
-
-
+#### Nuage de mots du moteur
+![Nuage de mots de la semaine 4](images/Semaine4Nuage.png)
 
 
 
