@@ -1,4 +1,4 @@
-# spaceinvaders
+# Projet SpaceInvaders M2105
 
 ## Semaine n°2 : du 26 avril au 2 mai 
 ### Sprints et fonctionnalités réalisées 
