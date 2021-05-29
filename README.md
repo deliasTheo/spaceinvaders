@@ -1,6 +1,10 @@
 # Projet SpaceInvaders M2105
 
-## Semaine n°2 : du 26 avril au 2 mai <a> semaine2 <a>
+## Sommaire
+- [Semaine n°2 : du 06 au 12 avril](#semaine2) 
+
+
+## Semaine n°2 : du 26 avril au 2 mai <a id='semaine2'> <a/>
 ### Sprints et fonctionnalités réalisées 
 #### Fonctionnalité 1 (en cours)
 - Story n°1 : Créer un espace de jeu
