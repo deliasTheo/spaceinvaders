@@ -1,6 +1,7 @@
 package fr.unilim.iut.spaceinvaders;
 
 import org.junit.Test;
+import fr.unilim.iut.spaceinvaders.model.*;
 import fr.unilim.iut.spaceinvaders.utils.*;
 
 public class VaisseauTest {
