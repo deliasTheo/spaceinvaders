@@ -2,9 +2,9 @@
 
 ## Sommaire
 - [Semaine n°2 : du 06 au 12 avril](#semaine2)
-- [Semaine n°3 : du 06 au 12 avril](#semaine2)
-- [Semaine n°4 : du 06 au 12 avril](#semaine2)
-- [Semaine n°5 : du 06 au 12 avril](#semaine2) 
+- [Semaine n°3 : du 06 au 12 avril](#semaine3)
+- [Semaine n°4 : du 06 au 12 avril](#semaine4)
+- [Semaine n°5 : du 06 au 12 avril](#semaine5) 
 
 
 ## Semaine n°2 : du 26 avril au 2 mai <a id='semaine2'> <a/>
