@@ -1,7 +1,10 @@
 # Projet SpaceInvaders M2105
 
 ## Sommaire
-- [Semaine n°2 : du 06 au 12 avril](#semaine2) 
+- [Semaine n°2 : du 06 au 12 avril](#semaine2)
+- [Semaine n°3 : du 06 au 12 avril](#semaine2)
+- [Semaine n°4 : du 06 au 12 avril](#semaine2)
+- [Semaine n°5 : du 06 au 12 avril](#semaine2) 
 
 
 ## Semaine n°2 : du 26 avril au 2 mai <a id='semaine2'> <a/>
@@ -19,11 +22,11 @@ Un nouveau vaisseau est créé Le vaisseau est positionné aux coordonnées tran
 ![Nuage de mots de la semaine 1](images/Semaine2Nuage.png)
 
 
-## Semaine n°3 : du 3 au 9 mai
+## Semaine n°3 : du 3 au 9 mai <a id='semaine3'> <a/>
 
 Cette semaine le projet n'a pas avancé
 
-## Semaine n°4 : du 10 au 16 mai
+## Semaine n°4 : du 10 au 16 mai <a id='semaine4'> <a/>
 ### Sprints et fonctionnalités réalisées 
 #### Fonctionnalité 1 
 - Story n°3 : Déplacer le vaisseau vers la droite dans l'espace de jeu
@@ -51,7 +54,7 @@ En therme de refactoring nous avons notemment crée deux nouvelle classe : dimen
 #### Nuage de mots
 ![Nuage de mots de la semaine 3](images/Semaine3Nuage.png)
 
-## Semaine n°5 : du 17 au 23 mai
+## Semaine n°5 : du 17 au 23 mai <a id='semaine5'> <a/>
 ### Sprints et fonctionnalités réalisées 
 #### Spike : Prise en main et intégration d'un moteur graphique
 - Dans un premier temps il a fallu comprendre le fonctionnement du moteur graphique utilisé. L'auteur de se script est Vincent Thomas, professeur a l'IUT Informatique de Reims.  J'ai donc commencé par tester le moteur graphique, lu la documentation et essayer de changer les touches "q" et "d" par les fleches.
