@@ -72,6 +72,7 @@ En therme de refactoring nous avons notemment crée deux nouvelle classe : dimen
 - Missile : projectile envoyé à la verticale par le vaisseau vers l'envahisseur dans le but de le détruire.
 - Sprite : élément graphique qui peut se déplacer sur l'écran.
 - Envahisseur : ennemi qui apparaît à l'écran, se déplace automatiquement et qui doit être détruit par un missile lancé depuis le vaisseau du joueur.
+- Collision : Une collision survient quand deux sprites se trouvent à la même position.
 
 
 
