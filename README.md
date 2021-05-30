@@ -15,10 +15,10 @@ Un espace de jeu est créé aux dimensions données (2D) Cet espace de jeu est v
 - Story n°2 : Positionner un nouveau vaisseau dans l’espace de jeu
 Un nouveau vaisseau est créé Le vaisseau est positionné aux coordonnées transmises Si un nouveau vaisseau essaye d’être positionné en dehors des limites de l’espace jeu, alors une exception devra être levée. Contraintes : La position souhaitée est transmise par ses coordonnées x et y. Le coin supérieur gauche de l’espace jeu (point en haut à gauche) a pour coordonnées (0,0) La taille du vaisseau est réduite pour l'instant à son minimum (1 seul point)
 
-#### Diagramme de classe
+### Diagramme de classe
 ![Diagrammes de classes de la semaine 1](images/Semaine2Diagramme.png)
 
-#### Nuage de mots
+### Nuage de mots
 ![Nuage de mots de la semaine 1](images/Semaine2Nuage.png)
 
 
@@ -47,11 +47,11 @@ Nous pouvons maintenant deplacer le vaisseau vers la droite en tenant compte des
 Tout comme ^récédemment, nous pouvons faire de même vers la gauche, et les test étais au vert. 
 En therme de refactoring nous avons notemment crée deux nouvelle classe : dimention et posistion afin que notre code soit plus lisible dans le temps. Toutes les classes ont ainsi subi des modifications allant dans se sens
 
-#### Diagramme de classe
+### Diagramme de classe
 
 ![Diagrammes de classes de la semaine 3](images/Semaine3Diagramme.png)
 
-#### Nuage de mots
+### Nuage de mots
 ![Nuage de mots de la semaine 3](images/Semaine3Nuage.png)
 
 ## Semaine n°5 : du 17 au 23 mai <a id='semaine5'> <a/>
@@ -60,13 +60,59 @@ En therme de refactoring nous avons notemment crée deux nouvelle classe : dimen
 - Dans un premier temps il a fallu comprendre le fonctionnement du moteur graphique utilisé. L'auteur de se script est Vincent Thomas, professeur a l'IUT Informatique de Reims.  J'ai donc commencé par tester le moteur graphique, lu la documentation et essayer de changer les touches "q" et "d" par les fleches.
 - Une fois le script compris, nous l'avons utilisé afin de l'intégrer à notre projet puis l'adapter afin qu'il respect les règles que nous avions déjà fixé. Notemment un vaisseau peut se déplacer seulement vers la droite et la gauche. Celui-ci ne peut pas non plus dépasser de la fenetre de jeu. 
 
-#### Diagramme de classe du moteur
+### Diagramme de classe du moteur
 
 ![Diagrammes de classes de la semaine 4](images/Semaine4Diagramme.PNG)
 
-#### Nuage de mots du moteur
+### Nuage de mots du moteur
 ![Nuage de mots de la semaine 4](images/Semaine4Nuage.png)
+  
+## Semaine n°5 : du  17 au 23 mai <a id='semaine5'> <a/>
+ 
+Cette semaine le projet n'as pas avancé
+  
+## Semaine n°6 : du 24 au 30 mai <a id='semaine5'> <a/>
+### Sprints et fonctionnalités réalisées
+#### Fonctionnalité 3 
+- Etape 1 : Ajouter la vitesse au Vaisseau sans régression de comportement
+Introduction de la variable vitesse dans la classe vaisseau. Pour l'intégrer à notre code, on a modifié dans les methodes "seDeplacerVersLaDroite" et "seDeplacerVersLaGauche" l'attribue vitesse a la place du 1. En effet, modifié cette vitesse nous permet de changer notre abscisse plus ou moins vite...
+- Etape 2 : Régler la vitesse du vaisseau
+Pour faire ceci il nous suffit d'instancier une vitesse dans un des constructeurs du vaisseau, et de re,ntrer une valeur de basse dans un autre.
+- Etape 3 : Faire en sorte que le déplacement se fasse correctement pour une vitesse quelconque
+C'est ici que la plupart des tests ont été fait. Il faut vériufié tout les cas de déplacement vers laz gauche est vers la droite. Notamment si il avance normalement ou si il vient a rencontrer un bord (celui-ci ne doit pas déborder). 
+- Etape 4 : Mise a jour du moteur graphique
+Ici rien de birn compliqué. Une constante vitesse a été ajouter au vaisseau dans "initialiserJeu". Elle est bien sur déclarer dans la classe constante. Puis nous avons tester quel vitesse étais le plus approprié.
+  
+#### Fonctionnalité 4
+- Etape 1 : Création d'un "srite"
+Dans cette étape nous vons choisi de refactorer un peu le code afin de défionir une supoer classe : "Sprite". C'est la super classe de vaisseau, et bientot missile...
+Quelques modifications dans la classe vaisseau ont été apporté afin d'y garder seulement un constructeur afin que chaque sprite puisse se deplacer.
+- Etape 2 : Tirer un missile en TDD
+Dans cettte étape nous avons crée une nouvelle methode "tirerUnMissile" qui nous sert enfaite à créer le missile. Plusieurs tests ont donc été fait en fonction de la longueur du missile et du vaisseau. Par exemple, si le vaisseau est pair et pas le missile, ou inversement. De plus une exception a été levé si le missile est plus grand que le vaisseau.
+- Etape 3 : Mise a jour du moteur graphique
+Pour tirer un missile nous avons choisie d'utiliser la touche espace. Pour tirer ce missile il a fallu le dessiner, faire des constantes (longueur, hauteur, vitesse), fait en sorte, grace a la methode evoluer, qu'un seul missile puisse être tirer à la fois. A la fin le missile est tiré mais n'avance pas...
+- Etape 4 : Faire déplacer le missile à la verticale de manière autonome
+Ici nous avons crée une nouvelle énumération "Direction". Grace a ceci nous avons pu refactorer un peu est ne faire apparaitre que des "+<direction>*vitesse" dans la methode "deplacerHhorizontalementVers". Une methode déplacer missile a ensuite été ajouté. Pour finir, des tests on été fait, puis passé au vert afin que le missile disparaisse lorsqu'il atteint le bord de l'espace de jeu. Quelques test en jeu ont ensuite été fait pour régler la vitesse du missile :)
 
+#### Fonctionnalité 5  
+- Etape 1 : Création d'un envahisseur
+Pour créer un envahisseur il a fallu :
+  - Créer une classe envahisseur héritant de Sprite
+  - Implémenter une methode "positionnerEnvahisseur"
+  - Réaliser un test ou l'on place l'envahisseur dans l'espace de jeu
+  - Mettre a jour la methode "recupererEspaceJeuDansChaineASCII"
+  - Faire des test pour créer un envahisseur avec dimention
+- Etape 2 : Un envahisseur qui se déplace de la droite vers la gauche
+Ici, nous avons réutiliser les tests du vaisseau, en les adaptant a l'envahisseur. Nous avons donc verifié notemment que l'envahisseur pouvais se deplacer mais aussi qu'il s'arrétait en cas de rencontre du bord de l'espace de jeu. Nous avons donc du implémenté des methode comme "deplacerEnvahisseurVersLaDroite" afin que celui ci puisse efectuer ses actions.
+- Etape 3 : Refactoring
+Dans cette étape de refactoring nous avons fait en sorte que l'envahisseur est le même type de nom de methode que le vaisseau afin que le code soit facile a interprété. On peut cité notemment la methode "recupererEnvahisseur" ou  "deplacerEnvahisseurVersLaDroite".
+- Etape 4 : Mise a jour du moteur graphique
+Nous avons du ici utiliser les même procéder que pour le vaisseau mais sans prendre en compte aucune commande de l'utilisateur. Nous avons donc désiner un envahisseur, créer une methode déplacerEnvahisseur, implémenté cette methode dans évolué, lorsque un envahisseur est présent. Enfin, il a fallu évidemment initialiser cette envahisseur.
+  
+#### Fonctionnalité 6  
+
+
+  
 ## Glossaire
 - Vaisseau : véhicule commandé par le joueur, pouvant se déplacer de droite à gauche et ayant la possibilité de lancer des missiles destinés à détruire le(s) envahisseurs. 
 - Missile : projectile envoyé à la verticale par le vaisseau vers l'envahisseur dans le but de le détruire.
