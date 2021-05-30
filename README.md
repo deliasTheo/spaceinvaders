@@ -1,10 +1,11 @@
 # Projet SpaceInvaders M2105
 
 ## Sommaire
-- [Semaine n°2 : du 06 au 12 avril](#semaine2)
-- [Semaine n°3 : du 06 au 12 avril](#semaine3)
-- [Semaine n°4 : du 06 au 12 avril](#semaine4)
-- [Semaine n°5 : du 06 au 12 avril](#semaine5) 
+- [Semaine n°2 : du 26 avril au 2 mai](#semaine2)
+- [Semaine n°3 : du 3 au 9 mai](#semaine3)
+- [Semaine n°4 : du 10 au 16 mai](#semaine4)
+- [Semaine n°5 : du 17 au 23 mai](#semaine5) 
+- [Semaine n°6 : du 24 au 30 mai](#semaine6) 
 
 
 ## Semaine n°2 : du 26 avril au 2 mai <a id='semaine2'> <a/>
@@ -71,7 +72,7 @@ En therme de refactoring nous avons notemment crée deux nouvelle classe : dimen
  
 Cette semaine le projet n'as pas avancé
   
-## Semaine n°6 : du 24 au 30 mai <a id='semaine5'> <a/>
+## Semaine n°6 : du 24 au 30 mai <a id='semaine6'> <a/>
 ### Sprints et fonctionnalités réalisées
 #### Fonctionnalité 3 
 - Etape 1 : Ajouter la vitesse au Vaisseau sans régression de comportement
@@ -110,8 +111,24 @@ Dans cette étape de refactoring nous avons fait en sorte que l'envahisseur est 
 Nous avons du ici utiliser les même procéder que pour le vaisseau mais sans prendre en compte aucune commande de l'utilisateur. Nous avons donc désiner un envahisseur, créer une methode déplacerEnvahisseur, implémenté cette methode dans évolué, lorsque un envahisseur est présent. Enfin, il a fallu évidemment initialiser cette envahisseur.
   
 #### Fonctionnalité 6  
+- Etape 1 : Créer et définir une collision
+Une collision se passe lorsque 1 objets x rentre contact avec un deuxième objet. Que se soity par la droite, par la gauche, par le haut pour par le bas. Vous l'aurez conpris, on vient de fdefinir nos test a faire pour la suite. Pour cela il nous faut créer une classe Collision et implémenter la méthode "detecterCollision". 
+- Etape 2 : Implémenter et valider nos tests
+C'est dans cette étape que nous avons créé nos tests dans une nouvelle classe CollisionTest. Puis nous avons complété la méthode "detecterCollision". Les tests de collision de tout les cotés ont donc été créer un par un. Pour prendre on compte tout les cas il faut s'imaginer les cas de collisions les plus minimes, comme par exemple si le mile percupe un missiles a un 1 px près. 
+- Etape 3 : Refactorisation 
+Dans cette étape nous avons refactorer essentiellement "detecterCollision". Afin que cela soit plus clair deux sous methodes ont été crée "collisionParAbscisse" et "collisionParOrdonnes". Puis une methodes mere "collisionParAbscisseEtOrdonne" a été implementé afin d'ameliorer la lisibilité.
+- Etape 4 : Mise a jour du moteur graphique
+Ici, il a fallu implémenter essentiellement la methode "évoluer" et ajouter un cas. Si on a un missile et un envahisseur dans l'espace de jeu, et que on detecte une collision, alors le missile et l'envahisseur sont passé a null. 
 
+  
+### Diagramme de classe
 
+![Diagrammes de classes de la semaine 6](images/Semaine6Diagramme.PNG)
+
+### Nuage de mots
+![Nuage de mots de la semaine 6](images/Semaine6Nuage.png) 
+  
+  
   
 ## Glossaire
 - Vaisseau : véhicule commandé par le joueur, pouvant se déplacer de droite à gauche et ayant la possibilité de lancer des missiles destinés à détruire le(s) envahisseurs. 
