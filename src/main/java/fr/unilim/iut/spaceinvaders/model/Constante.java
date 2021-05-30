@@ -17,7 +17,7 @@ public class Constante {
 	
 	public static final int MISSILE_LONGUEUR = 3;
 	public static final int MISSILE_HAUTEUR = 4;
-	public static final int MISSILE_VITESSE = 5;
+	public static final int MISSILE_VITESSE = 50;
 	
 	public static final int ENVAHISSEUR_LONGUEUR = 80;
 	public static final int ENVAHISSEUR_HAUTEUR = 50;

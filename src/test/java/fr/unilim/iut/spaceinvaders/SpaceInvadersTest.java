@@ -13,10 +13,12 @@ import fr.unilim.iut.spaceinvaders.utils.*;
 public class SpaceInvadersTest {
 	
 	private SpaceInvaders spaceinvaders;
+	private Collision collision;
 
     @Before
     public void initialisation() {
 	    spaceinvaders = new SpaceInvaders(15, 10);
+	    collision = new Collision();
     }
 
    @Test
@@ -372,6 +374,25 @@ public class SpaceInvadersTest {
 			"...............\n" , spaceinvaders.recupererEspaceJeuDansChaineASCII());
 		}
 	  
+	  @Test 
+	  public void test_unNouvelEnvahisseurAvecDimensionEtUnNouveauVaisseauEtUnMissileSontCorrectementPositionneDansEspaceJeu() {
+		  spaceinvaders.positionnerUnNouvelEnvahisseur(new Dimension(3,2),new Position(7,1), 1);
+			spaceinvaders.positionnerUnNouveauVaisseau(new Dimension(7,2),new Position(5,9), 1);
+			spaceinvaders.tirerUnMissile(new Dimension(3,2),2);
+					
+			assertEquals("" + 
+				       ".......EEE.....\n" + 
+				       ".......EEE.....\n" +
+				       "...............\n" + 
+				       "...............\n" + 
+				       "...............\n" + 
+				       "...............\n" + 
+				       ".......MMM.....\n" + 
+				       ".......MMM.....\n" + 
+				       ".....VVVVVVV...\n" + 
+				       ".....VVVVVVV...\n" , spaceinvaders.recupererEspaceJeuDansChaineASCII());
+	  }
+	  
 	  @Test
 		public void test_UnNouvelEnvahisseurPositionneDansEspaceJeuMaisAvecDimensionTropGrande_DoitLeverUneExceptionDeDebordement() {
 			
@@ -499,7 +520,17 @@ public class SpaceInvadersTest {
 	       "...............\n" + 
 	       "...............\n" , spaceinvaders.recupererEspaceJeuDansChaineASCII());
 	     }
-	    
+	    /*
+	    @Test
+	    public void test_FinDePartieApresUneCollision() {
+	    	spaceinvaders.positionnerUnNouveauVaisseau(new Dimension(4, 3), new Position(8, 4), 1);
+	        spaceinvaders.positionnerUnNouvelEnvahisseur(new Dimension(4, 3), new Position(7, 3), 1);
+	        this.collision.detecterCollision(this.spaceinvaders.recupererVaisseau(), this.spaceinvaders.recupererEnvahisseur());
+	        
+	        assertEquals(true, this.spaceinvaders.etreFini());
+	    	
+	    	
+	    }*/
 	    
 
 }
