@@ -119,6 +119,9 @@ C'est dans cette étape que nous avons créé nos tests dans une nouvelle classe
 Dans cette étape nous avons refactorer essentiellement "detecterCollision". Afin que cela soit plus clair deux sous methodes ont été crée "collisionParAbscisse" et "collisionParOrdonnes". Puis une methodes mere "collisionParAbscisseEtOrdonne" a été implementé afin d'ameliorer la lisibilité.
 - Etape 4 : Mise a jour du moteur graphique
 Ici, il a fallu implémenter essentiellement la methode "évoluer" et ajouter un cas. Si on a un missile et un envahisseur dans l'espace de jeu, et que on detecte une collision, alors le missile et l'envahisseur sont passé a null. 
+  
+#### Fonctionnalité 7
+- Dans cette fonctionnalité, il nous a fallu faire en sorte de rendre les différents sprites à null lors d'une collision
 
   
 ### Diagramme de classe
